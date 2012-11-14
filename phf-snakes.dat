@@ -1,0 +1,24 @@
+; principal parameters
+;---------------------
+image  images/shapes
+F      40
+lambda 10
+
+; additional parameters
+;----------------------
+sigma  0.01           ; standard variation for the gaussian kernel
+C_s    800            ; coefficient in the stopping criterium
+check_every_n_step 20 ; how often we check if the solution is stationary
+h      0.01
+
+save_images        true
+save_gnuplot       false
+save_every_n_step  10
+
+gauss-seidel {
+  tolerance       1.0e-6
+  max_iterations  10000  ; not checked in the current version
+}
+
+a         2.0
+add_noise false
